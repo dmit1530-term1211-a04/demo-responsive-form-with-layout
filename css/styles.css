@@ -131,9 +131,6 @@ ul.menu a:hover {
 
 
 /** Form Structure **/
-form {
-
-}
 form div {
     margin-bottom: 1.25rem; /*20px*/
 }
@@ -204,16 +201,34 @@ input[type="submit"]:hover {
         margin-left: 1.25rem;
     }
 
- 
+    form .flex-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+    }
+    /** target the immediate div within the flex-container **/
+    form .flex-container > div {
+        width: 48%;
+    }
 
+    /** have interest sit above our checked items **/
+    fieldset.flex-container {
+        flex-wrap: wrap;
+    }
+    /** have the h4 take up 100% of the space to force the checkboxes below */
+    fieldset h4 { flex-basis: 100%; }
 }
 
 @media screen and (min-width: 990px) {
     .flex-container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
-   
+
+    .col {
+        width: 48%;
+    }
 }
 
 
